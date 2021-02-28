@@ -1,0 +1,97 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "username",
+        "email",
+        "address",
+        "phone",
+        "website",
+        "company"
+    ],
+    "properties": {
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "username": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string",
+            "format": "email"
+        },
+        "address": {
+            "type": "object",
+            "default": {},
+            "required": ["street", "suite", "city", "zipcode"],
+            "properties": {
+                "street": {
+                    "type": "string"
+                },
+                "suite": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "zipcode": {
+                    "type": "string"
+                },
+                "geo": {
+                    "type": "object",
+                    "properties": {
+                        "lat": {
+                            "type": "number"
+                        },
+                        "lng": {
+                            "type": "number"
+                        }
+                    }
+                }
+            }
+        },
+        "phone": {
+            "type": "string"
+        },
+        "website": {
+            "$id": "#/properties/website",
+            "type": "string",
+            "format": "url"
+        },
+        "company": {
+            "type": "object",
+            "required": ["name", "catchPhrase", "bs"],
+            "properties": {
+                "name": {
+                    "$id": "#/properties/company/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["Romaguera-Crona"]
+                },
+                "catchPhrase": {
+                    "$id": "#/properties/company/properties/catchPhrase",
+                    "type": "string",
+                    "title": "The catchPhrase schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["Multi-layered client-server neural-net"]
+                },
+                "bs": {
+                    "$id": "#/properties/company/properties/bs",
+                    "type": "string",
+                    "title": "The bs schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": ["harness real-time e-markets"]
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

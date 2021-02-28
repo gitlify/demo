@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "required": ["postId", "id"],
+    "properties": {
+        "postId": {
+            "$ref": "posts/properties/id"
+        },
+        "id": {
+            "type": "integer"
+        },
+        "name": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string",
+            "format": "email"
+        },
+        "body": {
+            "type": "string"
+        }
+    }
+}

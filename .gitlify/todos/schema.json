@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "properties": {
+        "userId": {
+            "$ref": "users/properties/id"
+        },
+        "id": {
+            "type": "integer"
+        },
+        "title": {
+            "type": "string"
+        },
+        "completed": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}
