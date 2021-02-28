@@ -2,21 +2,12 @@
     "$schema": "http://json-schema.org/draft-07/schema",
     "$id": "http://example.com/example.json",
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
+    "title": "Posts",
     "default": {},
-    "examples": [
-        {
-            "userId": 1,
-            "id": 1,
-            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-        }
-    ],
     "required": ["userId", "id", "title", "body"],
     "properties": {
         "userId": {
-            "$ref": "users/properties/id"
+            "$ref": "users#/properties/id"
         },
         "id": {
             "type": "integer"

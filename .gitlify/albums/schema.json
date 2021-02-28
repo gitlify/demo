@@ -5,7 +5,7 @@
     "required": ["userId", "id", "title"],
     "properties": {
         "userId": {
-            "$ref": "users/properties/id"
+            "$ref": "users#/properties/id"
         },
         "id": {
             "type": "integer"

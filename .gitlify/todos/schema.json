@@ -1,11 +1,10 @@
 {
     "type": "object",
-    "title": "The root schema",
-    "description": "The root schema comprises the entire JSON document.",
+    "title": "Todos",
     "default": {},
     "properties": {
         "userId": {
-            "$ref": "users/properties/id"
+            "$ref": "users#/properties/id"
         },
         "id": {
             "type": "integer"

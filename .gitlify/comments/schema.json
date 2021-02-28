@@ -3,7 +3,7 @@
     "required": ["postId", "id"],
     "properties": {
         "postId": {
-            "$ref": "posts/properties/id"
+            "$ref": "posts#/properties/id"
         },
         "id": {
             "type": "integer"

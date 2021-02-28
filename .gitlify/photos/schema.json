@@ -3,7 +3,7 @@
     "required": ["albumId", "id", "title"],
     "properties": {
         "albumId": {
-            "$ref": "albums/properties/id"
+            "$ref": "albums#/properties/id"
         },
         "id": {
             "type": "integer"
